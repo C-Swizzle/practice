@@ -11,6 +11,30 @@
 Sample array : [1,2,3,4,5]
 Expected Output : 2,4  -->
     <script type="text/javascript">
+    var numberArray=[];
+    for (var i=0; i<10; i++) {
+        numberArray.push(Math.floor(Math.random() * 500));
+    }
+    console.log(numberArray);
+    function second(arr) {
+        var lowest=numberArray[0];
+        var secondLowest=numberArray[0];
+        var highest=numberArray[0];
+        var secondHighest=numberArray[0];
+        for (var i=1; i<numberArray.length; i++) {
+            if (numberArray[i]<lowest) {
+                secondLowest=lowest;
+                lowest=numberArray[i];
+            }
+            if (numberArray[i]>highest) {
+                secondHighest=highest;
+                highest=numberArray[i];
+            }
+        }
+        console.log(lowest, secondLowest, secondHighest, highest);
+
+    }
+    second(numberArray);
     </script>
 </body>
 </html>
