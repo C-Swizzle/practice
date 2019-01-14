@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    var randNum = Math.floor(Math.random()*10000000);
+    console.log(randNum);
+    function divis3(x) {
+        x = x.toString();
+        var newArray=[];
+        var add=0;
+        for (var i=0; i<x.length; i++) {
+            var numberToPush = Number(x.charAt(i));
+            newArray.push(numberToPush);
+        }
+        for (var i=0; i<newArray.length; i++) {
+            add = add + newArray[i];
+        }
+        console.log(newArray);
+        console.log(add);
+        if (add%3===0) {
+            return "Divisible by 3!";
+        } else {
+            return "Not divisible by 3!";
+        }
+    }
+    console.log(divis3(randNum));
+
+    function divis8(x) {
+        x = x.toString();
+        var arrayToPush=[];
+        var push;
+        var lastDigits;
+        for (var i=x.length-3; i<x.length; i++) {
+            push=Number(x.charAt(i));
+            arrayToPush.push(push);
+            
+        }
+        lastDigits=Number(arrayToPush.join(""));
+        console.log(lastDigits);
+        if (lastDigits%8===0) {
+            return "Divisible by 8!";
+        } else {
+            return "Not Divisible by 8!";
+        }
+       
+    }
+    console.log(divis8(randNum));
+    </script>
+</body>
+</html>
