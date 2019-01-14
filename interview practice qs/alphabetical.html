@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        
+3. Write a JavaScript function that returns a passed string with letters in alphabetical order. 
+Example string : 'webmaster' 
+Expected Output : 'abeemrstw'
+Assume punctuation and numbers symbols are not included in the passed string.
+-->
+
+<script type="text/javascript">
+var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var arrayToPush =[];
+var wordArray=[];
+var returnedWord;
+function alphabetize(str) {
+    for (var i=0; i<str.length; i++) {
+        str = str.toString().toLowerCase();
+        wordArray.push(str[i]);
+    }
+    for (var k=0; k<alphabet.length; k++){
+    for (var j=0;j<wordArray.length; j++) {
+        
+        if (wordArray[j]===alphabet[k]) {
+            arrayToPush.push(wordArray[j])
+        }
+    }
+    }
+    returnedWord = arrayToPush.join("");
+    return returnedWord;
+    }
+
+console.log(alphabetize("anime lover 420"));
+
+</script>
+</body>
+</html>

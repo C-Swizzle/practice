@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 3. Write a JavaScript function that accepts two arguments, a string and a letter and the function will count the number of occurrences of the specified letter within the string. 
+Sample arguments : 'w3resource.com', 'o' 
+Expected output : 2  -->
+    <script type="text/javascript">
+    function numberOfOccurence(str, check) {
+        var count=0;
+        for (var i=0; i<str.length; i++) {
+            if (str[i]===check) {
+                count++;
+            }
+        }
+        console.log(count);
+    }
+    numberOfOccurence("w3resource.comoooo", "o");
+    </script>
+</body>
+</html>
