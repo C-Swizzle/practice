@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    function quadratic(a,b,c) {
+        var ans1;
+        var ans2;
+        var store;
+        var store2;
+        var denominator=2*a;
+        var decidor;
+        if (b**2-4*a*c>0) {
+            store = -b + Math.sqrt(b**2-4*a*c);
+            store2 = -b - Math.sqrt(b**2-4*a*c);
+            ans1 = store/denominator;
+            ans2 = store2/denominator;
+        } else if (b**2-4*a*c===0) {
+            ans1 = -b/denominator;
+            ans2 = ans1;
+        } else if(b**2-4*a*c<0) {
+           decidor= b**2-4*a*c;
+           decidor = -decidor;
+           decidor = Math.sqrt(decidor);
+           decidor =decidor/denominator;
+           decidor = decidor + "i";
+           store=-b/denominator;
+           if (store!==0) {
+           ans1=store + "+" +  decidor;
+           ans2=store  + "-" +  decidor;
+           } else {
+               ans1=decidor;
+               ans2="-" + decidor;
+           }
+        }
+      
+        return ans1 + ", " + ans2;
+    }
+    console.log(quadratic(1,9,7));
+    </script>
+</body>
+</html>
