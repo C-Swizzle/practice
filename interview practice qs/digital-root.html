@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    
+    function digitalRoot(x) {
+        x = Number(x);
+        var string =x.toString();
+        var root=0;
+        for (var i=0; i<string.length; i++) {
+            root = root + Number(string[i]);
+        }
+        x = root;
+        if (x>9){
+            return digitalRoot(x);
+        } else if (x<=9){
+        return x;
+        }
+    }
+    console.log(digitalRoot(123456789013245));
+    
+    </script>
+</body>
+</html>
