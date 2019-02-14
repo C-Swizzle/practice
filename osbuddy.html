@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.js"
+        integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var buyAvg=[];
+        var sellAvg=[];
+        var diff=[];
+        function getData() {
+
+            jQuery.ajax({url: "https://www.omdbapi.com/?t=lion&y=&plot=short&apikey=trilogy", method: "GET"})
+            .then(function(response) {
+                // var tBow=JSON.parse('{"name":"Twisted Bow"}');
+                // console.log(tBow);
+                console.log(response);
+
+
+            });
+        }
+        getData();
+
+    });
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- <button id="click-me">Click Me to Try</button> -->
+    <form>  
+        <input type="text" placeholder="Chance" id="chance">
+        <button type="submit" id="submit">Submit</button>
+    </form>
+    <h1 id="somethingidk"></h1>
+    <script type="text/javascript">
+    
+    function rng(x,y) {
+        count = 1;
+        var number = Math.floor(Math.random()*y);
+        
+        while(number>=x) {
+            console.log("Try Again");
+            count ++;
+            var number = Math.floor(Math.random()*y);
+        }
+        return count;
+    }   
+    
+    $(document).on("click", "#submit", function(e) {
+        e.preventDefault();
+        var outOf=$("#chance").val();
+        var tries = rng(1,outOf);
+        $("#somethingidk").text("It took " + tries + " tries to get the drop!")
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it 
+        should replace the missing second character of the final pair with an underscore ('_').
+
+Examples:
+
+solution('abc') // should return ['ab', 'c_']
+solution('abcdef') // should return ['ab', 'cd', 'ef']
+     -->
+    <script type="text/javascript">
+    function split(x) {
+        var newArray=[];
+        for (var i=0; i<x.length; i+=2) {
+            newArray.push(x.substr(i, i+2))
+        }
+        if (x.length%2!==0) {
+            newArray[Math.floor(x.length/2)] = newArray[Math.floor(x.length/2)] + "_";
+        }
+        return newArray;
+    }
+    </script>
+</body>
+</html>
